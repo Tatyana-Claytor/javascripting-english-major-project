@@ -1,5 +1,19 @@
-let arrayOfStrings, arrayOfNumbers, arrayMixed;
-arrayOfStrings = ["a", "b", "c"];
-arrayOfNumbers = [1,2,3];
-arrayMixed = ["a", 1, null, true, arrayOfNumbers, [4.5, 5.6]];
-$("#response").html(arrayOfStrings[0]);
+let myHabaneroSauceSquirts, myBurritoObjects;
+myHabaneroSauceSquirts = 3;
+myBurritoObject = {
+  tortilla: "wheat",
+  guacamole: true,
+  beans: "pinto",
+  myHabaneroSauceSquirts: myHabaneroSauceSquirts,
+  spiciness: function(){
+    if (myHabaneroSauceSquirts > 0 ){
+      alert("This is a spicy burrito!");
+    } else {
+      alert("This is a mild burrito.");
+    }
+  }
+};
+$("#response").html("Your burrito has " +
+myBurritoObject.myHabaneroSauceSquirts +
+" squirts of habanero.");
+myBurritoObject.spiciness();
