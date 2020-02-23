@@ -1,7 +1,18 @@
-Var denotation = 5
-Var connotation = 5
-If (denotation == connotation) {
-	Console.log(“The interpretation cannot be divided”);
-} else {
-	Console.log(“The interpretation is dependent on culture”);
+let UserString, upperCaseMinusE, upperCasedString;
+userString = prompt("What do you want to UPPeRCASE?");
+upperCaseMinusE = function(string){
+let result;
+result = "";
+for ( let i = 0; i < string.length ; i = i + 1) {
+let letter;
+letter = string[i];
+	if ( letter === "e" ){
+		result = letter;
+	} else {
+		result = result + letter.toUpperCase();
 	}
+ }
+ return result;
+};
+upperCasedString = upperCaseMinusE(userString);
+$("#response").html(upperCasedString);
